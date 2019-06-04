@@ -48,7 +48,7 @@ class ManifestLoader
 
 	public function getManifestPath(string $fileName): string
 	{
-		return $this->directoryProvider->getBuildDirectory() . '/' . $fileName;
+		return \rtrim($this->directoryProvider->getBuildDirectory(), '/') . '/' . \ltrim($fileName, '/');
 	}
 
 }
