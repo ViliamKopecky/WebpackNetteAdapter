@@ -63,7 +63,7 @@ class WebpackExtension extends CompilerExtension
 			throw new ConfigurationException('You need to specify the build directory.');
 		}
 
-		if (empty($config['build']['publicPath'])) {
+		if ($config['build']['publicPath'] === NULL) {
 			throw new ConfigurationException('You need to specify the build public path.');
 		}
 
